@@ -18,9 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('total_product');
             $table->unsignedBigInteger('sub_total');
             $table->timestamps();
-
-            $table->foreign('id_sale')->references('id')->on('sales');
-            $table->foreign('id_product')->references('id')->on('products');
+            $table->foreign('id_sale')->references('id')->on('sales')->onDelete('cascade');
+            $table->foreign('id_product')->references('id')->on('products')->onDelete('cascade');
         });
     }
 

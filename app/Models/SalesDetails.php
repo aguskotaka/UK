@@ -13,7 +13,7 @@ class SalesDetails extends Model
         'id_sale',
         'id_product',
         'total_product',
-        'sub_product',
+        'sub_total',
     ];
 
     public function sale(){
