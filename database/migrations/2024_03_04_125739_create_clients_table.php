@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string('client_name');
-            $table->string('addres');
+            $table->string('address');
             $table->unsignedBigInteger('phone');
             $table->timestamps();
         });

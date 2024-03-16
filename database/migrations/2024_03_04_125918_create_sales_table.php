@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->date('sales_date');
-            $table->unsignedBigInteger('total_price');
+            $table->unsignedBigInteger('total_price')->nullable();
             $table->unsignedBigInteger('id_client');
-            $table->foreign('id_client')->references('id')->on('clients');
+            $table->foreign('id_client')->references('id')->on('clients')->onDelete('cascade');
             $table->timestamps();
         });
     }
